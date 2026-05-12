@@ -1,14 +1,18 @@
 # Phishing URL Detection
 
 ## Overview
-This project is a Machine Learning based web application that detects whether a URL is legitimate or phishing. The system analyzes various URL-based features and predicts the authenticity of the website using an SVM model.
+This project is a Machine Learning based web application that detects whether a URL is legitimate or phishing using an SVM model and URL feature extraction techniques.
+
+---
 
 ## Features
 - Detects phishing and legitimate URLs
 - Machine Learning based prediction
-- Feature extraction from URLs
-- Web interface for user input
-- Fast and lightweight prediction system
+- URL feature extraction
+- Simple web interface using Flask
+- Fast prediction system
+
+---
 
 ## Tech Stack
 - Python
@@ -18,46 +22,64 @@ This project is a Machine Learning based web application that detects whether a 
 - Scikit-learn
 - Joblib
 
+---
+
 ## Machine Learning Model
 - Support Vector Machine (SVM)
 
+---
+
 ## Project Structure
+
 ```bash
 phishing-url-detection/
 │
 ├── dataset/
 ├── static/
 ├── templates/
-├── driver/
-├── extractor/
 ├── model/
-├── app.py
-├── requirements.txt
-└── README.md
+├── driver.py
+├── extractor.py
+├── svm.joblib
+├── README.md
+└── requirements.txt
 ```
+
+---
 
 ## Installation
 
-### Clone Repository
+Run this command in CMD:
+
 ```bash
-git clone https://github.com/Muskan907/phishing-url-detection.git
+pip install urllib3 requests beautifulsoup4 flask pandas joblib
 ```
 
-### Install Dependencies
+---
+
+## Running the Project
+
+Open command prompt in the project directory and run:
+
 ```bash
-pip install -r requirements.txt
+python driver.py
 ```
 
-### Run Project
-```bash
-python app.py
+Open in browser:
+
+```txt
+http://127.0.0.1:5000/
 ```
+
+---
 
 ## Future Improvements
-- Deep learning integration
-- Real-time browser extension
-- Improved feature engineering
+- Browser extension integration
+- Deep learning implementation
+- Real-time URL scanning
 - API deployment
+
+---
 
 ## Author
 Muskan Patni
